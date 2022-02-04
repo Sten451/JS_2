@@ -1,0 +1,31 @@
+#button_cart {
+    position: absolute;
+    right: 20px;
+}
+.bg-primary {
+    min-height: 100px;
+}
+h1 {
+    margin-left: 20px;
+    color: lightcyan;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+#button_cart:hover {
+    background-color: white;
+    color: blue;
+}
+.products {
+    padding: 20px 20px 20px 20px;
+    max-width: 1920px;
+}
+.card {
+    float: left;
+    margin-right: 20px;
+    width: 18rem;
+}
+.card-img-top{
+    min-height: 214px;
+}
+.btn-success {
+    margin-left: 170px;
+}
