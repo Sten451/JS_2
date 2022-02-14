@@ -36,3 +36,13 @@ h1 {
 .hidden {
     display: none;
 }
+
+.custom_h2 {color: green;}
+.custom_header {margin: 40px 0 20px 40px;}
+.custom_table {border:1px; width:100%; cellPadding:5px;}
+.modal-title {color: coral;}
+
+.modal {
+    display: block;
+}
+
