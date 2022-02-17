@@ -1,0 +1,48 @@
+#button_cart {
+    position: absolute;
+    right: 20px;
+}
+.bg-primary {
+    min-height: 100px;
+}
+h1 {
+    margin-left: 20px;
+    color: lightcyan;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+#button_cart:hover {
+    background-color: white;
+    color: blue;
+}
+.products {
+    padding: 20px 20px 20px 20px;
+    max-width: 1920px;
+}
+.card {
+    float: left;
+    margin-right: 20px;
+    width: 18rem;
+}
+.card-img-top{
+    min-height: 214px;
+}
+.btn-success {
+    margin-left: 170px;
+}
+.footer{
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.custom_h2 {color: green;}
+.custom_header {margin: 40px 0 20px 40px;}
+.custom_table {border:1px; width:100%; cellPadding:5px;}
+.modal-title {color: coral;}
+
+.modal {
+    display: block;
+}
+
