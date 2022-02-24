@@ -7,26 +7,61 @@ const app = new Vue({
         products: [],
         filtered: [],
         imgCatalog: 'https://via.placeholder.com/200x150',
-        userSearch: '',
-        show: false,
-        isVisibleCart: true,
+        isNotVisibleCart: true,
+        cartUrl: '/getBasket.json',
+        cartItems: [],
+        imgCart: 'https://placehold.it/50x100',
     },
     methods: {
-        filter() {
-            const regexp = new RegExp(this.userSearch, 'i');
+        filter(search) {
+            const regexp = new RegExp(search, 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
+
+        },
+         receiveclass(data){
+            this.isNotVisibleCart = !data
+
         },
         getJson(url) {
-            console.log(url)
+
             return fetch(url)
                 .then(result => result.json())
                 .catch(error => {
-                    console.log(error);
+
                 })
         },
-        addProduct(product) {
-            console.log(product.id_product);
-        }
+        addProduct(item){
+            console.log("add_product", item)
+            this.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+                    if(data.result === 1){
+                        console.log(data.result)
+                       let find = this.cartItems.find(el => el.id_product === item.id_product);
+                       console.log(find)
+                        if(find){
+                           find.quantity++;
+                       } else {
+                           console.log('else')
+                           const prod = Object.assign({quantity: 1}, item);
+                           this.cartItems.push(prod)
+                           console.log("this.cartItems", this.cartItems)
+                       }
+                    }
+                })
+        },
+        remove(item){
+            console.log("remove_product")
+            this.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        if(item.quantity>1){
+                            item.quantity--;
+                        } else {
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                        }
+                    }
+                })
+        },
     },
     mounted() {
         this.getJson(`${API + this.catalogUrl}`)
