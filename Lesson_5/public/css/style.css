@@ -1,16 +1,18 @@
 body{
     font-family: 'SF Pro Display', sans-serif;
 }
-header{
-    display: flex;
-    background-color: #2f2a2d;
-    justify-content: space-between;
-    color: #fafafa;
-    padding: 30px 80px;
-}
 button:focus{
     outline: none;
 }
+
+.float {
+    float: left;
+}
+
+.float_none {
+    float: none;
+}
+
 .logo{
 
     text-transform: uppercase;
@@ -41,7 +43,7 @@ button:focus{
 /*}*/
 .products{
     column-gap: 30px;
-    display: grid;
+    /*display: grid;*/
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 1fr;
     padding: 40px 80px;
@@ -218,3 +220,6 @@ h1 {
     display: block;
 }
 
+.modal-dialog {
+    max-width: 600px;
+}
