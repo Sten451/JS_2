@@ -6,7 +6,7 @@
             "id_product": 123,
             "product_name": "Ноутбук",
             "price": 45600,
-            "quantity": 69
+            "quantity": 70
         },
         {
             "id_product": 456,
@@ -21,7 +21,7 @@
             "price": 3000
         },
         {
-            "quantity": 39,
+            "quantity": 40,
             "id_product": 124,
             "product_name": "Keyboard",
             "price": 1600
